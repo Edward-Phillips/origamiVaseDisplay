@@ -1,0 +1,27 @@
+.svgWrapper {
+  transform: rotate(180deg);
+  display: flex;
+  width: 100%;
+  /* max-height: 50vh; */
+  margin: auto;
+  padding-bottom: 45px;
+  padding-top: 45px;
+}
+
+@media screen and (max-width: 768px) {
+  .svgWrapper {
+    width: 100vw;
+    transform: rotate(90deg);
+    max-height: 100vh;
+  }
+}
+
+.creasePatternSVG {
+  flex: 1;
+  padding-bottom: 20px;
+}
+
+.outline {
+  stroke: black;
+  stroke-width: 1;
+}

@@ -1,0 +1,40 @@
+
+.SVGOuterContainer {
+  display: grid;
+  grid-template-areas: "SVG controls";
+  grid-template-columns: 1fr 1fr;
+
+}
+
+@media only screen and (max-width: 768px) {
+  .SVGOuterContainer {
+  grid-template-areas: "SVG"
+    "controls";
+  }
+}
+
+.SVGControls {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 30px);
+  row-gap: 10px;
+}
+
+.goreInputs {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: 10px;
+}
+
+.mainWrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.dragAndDropSVG {
+  border-style: solid;
+  border-width: 1px;
+}
