@@ -6,7 +6,13 @@ To view this in action, [have a look here](https://origami-vase-display.vercel.a
 
 ## Local development
 
-First, run the development server:
+
+First, install the dependencies:
+```bash
+npm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
