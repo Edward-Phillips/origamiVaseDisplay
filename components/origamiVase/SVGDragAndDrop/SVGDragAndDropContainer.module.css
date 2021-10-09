@@ -18,6 +18,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: repeat(4, 30px);
   row-gap: 10px;
+  /* align-items:start; */
 }
 
 .goreInputs {
@@ -37,4 +38,10 @@
 .dragAndDropSVG {
   border-style: solid;
   border-width: 1px;
+}
+
+.description {
+  display: grid;
+  margin-left: 20px;
+  margin-right: 20px;
 }
