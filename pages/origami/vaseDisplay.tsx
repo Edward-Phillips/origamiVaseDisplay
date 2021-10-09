@@ -4,7 +4,7 @@ import SVGDragAndDropContainer from '../../components/origamiVase/SVGDragAndDrop
 
 const VaseDisplay: NextPage = () => {
   return (
-    <div>
+    <>
       <Head >
         <title>Vase Display</title>
         <link rel="icon" href="/favicon.ico" />
@@ -13,7 +13,7 @@ const VaseDisplay: NextPage = () => {
       <h1 style={{textAlign: "center"}}>Vase Display</h1>
       <SVGDragAndDropContainer />
     </main>
-    </div>
+    </>
   )
 }
 
