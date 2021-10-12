@@ -1,15 +1,13 @@
 
 .SVGOuterContainer {
   display: grid;
-  grid-template-areas: "SVG controls";
   grid-template-columns: 1fr 1fr;
 
 }
 
 @media only screen and (max-width: 768px) {
   .SVGOuterContainer {
-  grid-template-areas: "SVG"
-    "controls";
+    grid-template-columns: 1fr;
   }
 }
 
