@@ -77,7 +77,7 @@ export default function SVGContainer() {
         <div className={styles.description}>
           <div>
             <h2>What is this thing??</h2>
-            <p>The image to the left represents the cross section of a vase, by moving the blue points around you change the shape of the crease pattern below (scroll down!). Unless you are an advanced user/familiar with <a href="http://rebecca.gieseking.us/2013/03/tutorial-designing-pleated-forms-2/">the maths behind this</a>, it is recommended to leave the pleat width, number, length & total width settings alone. If you've made a vase why not try printing it out and folding it?</p>
+            <p>The box with the black line going through all the blue circles represents the cross section of a vase, by moving the blue circles around you change the shape of the crease pattern below (scroll down!). Unless you are an advanced user/familiar with <a href="http://rebecca.gieseking.us/2013/03/tutorial-designing-pleated-forms-2/">the maths behind this</a>, it is recommended to leave the pleat width, number, length & total width settings alone. If you've made a vase why not try printing it out and folding it?</p>
           </div>
           <div className={styles.SVGControls}>
             <button onClick={addPointToPointsObject}>Add Point</button>
