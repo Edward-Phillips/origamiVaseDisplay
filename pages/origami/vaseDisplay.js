@@ -1,10 +1,9 @@
-import type { NextPage } from 'next';
 import Head from 'next/head';
 import Layout from '../../components/LandingPage/layout';
 import Sidebar from '../../components/LandingPage/sidebar';
 import SVGDragAndDropContainer from '../../components/origamiVase/SVGDragAndDrop/SVGDragAndDropContainer';
 
-const VaseDisplay: NextPage = () => {
+const VaseDisplay = () => {
   return (
     <>
       <Head >
