@@ -1,7 +1,7 @@
 .svgWrapper {
   transform: rotate(180deg);
   display: flex;
-  width: 100%;
+  min-width: 95%;
   /* max-height: 50vh; */
   margin: auto;
   padding-bottom: 45px;

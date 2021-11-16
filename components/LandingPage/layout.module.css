@@ -1,0 +1,10 @@
+.main {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  background-color: white;
+  column-gap: 20px;
+}
+
+.main > section {
+  padding: 32px;
+}
