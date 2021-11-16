@@ -1,11 +1,12 @@
-import type { NextPage } from 'next';
+import { AppContext, AppInitialProps, AppLayoutProps } from 'next/app';
+import type { NextComponentType } from 'next';
 import Head from 'next/head';
 import Layout from '../../components/LandingPage/layout'
 import Sidebar from '../../components/LandingPage/sidebar'
 
 
 
-const projectEuler: NextPage = () => {
+const projectEuler: NextComponentType<AppContext, AppInitialProps, AppLayoutProps> = () => {
   return (
     <>
       <Head >
