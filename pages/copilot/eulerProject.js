@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import Layout from '../../components/LandingPage/layout'
-import Sidebar from '../../components/LandingPage/sidebar'
+import Layout from '../../components/LayoutComponents/layout'
+import Sidebar from '../../components/LayoutComponents/sidebar'
 
 
 
