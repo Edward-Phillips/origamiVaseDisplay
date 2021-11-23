@@ -1,7 +1,8 @@
 import Head from 'next/head'
-import styles from './layout.module.css'
+import defaultStyle from './layout.module.css'
 
-export default function Layout({ children }) {
+export default function Layout({ children, propStyle }) {
+  const styles = propStyle ? propStyle : defaultStyle;
   return (
     <>
       <Head>
@@ -10,4 +11,4 @@ export default function Layout({ children }) {
       <main className={styles.main}>{children}</main>
     </>
   )
-}
+} 
