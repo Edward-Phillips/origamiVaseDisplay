@@ -1,25 +1,14 @@
-This is a NextJS project I made to help me prototype Origami Vases & learn a little bit about NextJS.
+This is a NextJS project I made to help me prototype Origami Vases & learn a little bit about NextJS and has slowly morphed into my own personal website.
 
+
+Projects on the site:
+### Origami vase display:
 The idea is to manipulate the cross section of a vase and add details like how many gores (pleats) you want, how wide you want each gore to be, or how long you want it to be, with the end result being a crease pattern that you can print out to fold into the shape of the vase you've made the cross section of.
 
-To view this in action, [have a look here](https://origami-vase-display.vercel.app/).
 
-## Local development
+### Github Copilot:
+
+I have been lucky enough to be involved in the github copilot technical preview for a few months now and in these pages I'll be documenting the projects/experiences I've had with the copilot, including trying to get it to solver problems from the Euler Project.
 
 
-First, install the dependencies:
-```bash
-npm install
-```
-
-Then, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+To view the site in action, [have a look here](https://edphillips.co.uk).
