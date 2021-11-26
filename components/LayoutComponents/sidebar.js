@@ -1,14 +1,12 @@
 import Link from 'next/link'
-import styles from './sidebar.module.css'
+import styles from './sidebar.module.scss'
 
 export default function Sidebar() {
+
   return (
     <nav className={styles.nav}>
       <Link href="/">
         <a>Home</a>
-      </Link>
-      <Link href="/about">
-        <a>About</a>
       </Link>
       <Link href="/origami/vaseDisplay">
         <a>Origami Vase design</a>
