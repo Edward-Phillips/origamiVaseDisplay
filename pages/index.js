@@ -5,10 +5,19 @@ export default function Index() {
   return (
     <>
       <section>
-        <h2>This is the home page</h2>
+        <h2>Home</h2>
         <p>
-          This is a website I am building to improve my skills in frontend development. You'll probably be able to tell which part of the site I started on, I'll try to keep a log here of what order things were added so as to give some context.
+          This is a website I am building to improve my skills in frontend development.
         </p>
+      <article>
+        <h3>About me</h3>
+        <p>
+          I'm Ed, I am a software engineer, I also fold origami and do terrible drawings. My code is slightly better. Usually.
+        </p>
+        <p>
+          I am a full stack developer, currently working in react and Laravel. Most of my side projects are written in react or node. I have recently been implementing typescript where convenient and am a big fan.
+        </p>
+    </article>
       </section>
     </>
   )
