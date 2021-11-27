@@ -1,9 +1,10 @@
-import Layout from '../components/LayoutComponents/layout'
-import Sidebar from '../components/LayoutComponents/sidebar'
-
+import Layout from '../components/LayoutComponents/layout';
+import Sidebar from '../components/LayoutComponents/sidebar';
+import ProfessionalTimeline from '../components/Timeline/ProfessionalTimeline';
+import styles from './index.module.scss';
 export default function Index() {
   return (
-    <>
+    <div className={styles.indexContainer}>
       <section>
         <h2>Home</h2>
         <p>
@@ -19,7 +20,10 @@ export default function Index() {
         </p>
     </article>
       </section>
-    </>
+      <section>
+        <ProfessionalTimeline />
+      </section>
+    </div>
   )
 }
 
