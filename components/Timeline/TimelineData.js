@@ -20,8 +20,8 @@ const timelineData = [
   },
   {
     title: "2018-2019",
-    cardTitle: "Zavamed: Accounts Assistant",
-    cardSubtitle: "My third job",
+    cardTitle: "Zavamed",
+    cardSubtitle: "My third job: Accounts Assistant",
     cardDetailedText: "Dr Ed went through a rebrand to Zavamed and I managed to secure a position in the finance team, processing invoices and closing the books every month, it was here that I developed my interest in programming, as a significant portion of my job was happening in google sheets I found myself building dynamic dashboards and template sheets to allow automatic imports into our accounting system"
   },
   {
@@ -32,8 +32,8 @@ const timelineData = [
   },
   {
     title:"2020-present",
-    cardTitle: "Twine: Junior Fullstack Developer",
-    cardSubtitle: "My fourth job",
+    cardTitle: "Twine",
+    cardSubtitle: "My fourth job: Junior Fullstack Developer",
     cardDetailedText: "I started working at Twine in November of 2020, working on a react frontend with a laravel backend hosted on AWS. Twine is a startup whose product is a freelance jobs board allowing clients to connect to freelancers all over the world. Twine has been an absolute blast so far, we're a small team working in 1 week sprints which has forced tickets to be as small as possible and given us the ability to pivot quickly should the need arise"
   }
 ];
