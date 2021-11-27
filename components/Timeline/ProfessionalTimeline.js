@@ -11,7 +11,8 @@ export default function ProfessionalTimeline() {
       mode="VERTICAL_ALTERNATING"
       hideControls
       disableNavOnKey
-      enableOutline
+      useReadMore={false}
+      cardWidth={450}
       />
     </div>
   );
