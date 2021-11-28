@@ -11,7 +11,7 @@ export default function Sidebar() {
       <Link href="/origami/vaseDisplay">
         <a>Origami Vase design</a>
       </Link>
-      <Link href="/copilot/eulerProject">
+      <Link href="/copilot/EulerProject">
         <a>Project Euler</a>
       </Link>
       <Link href="/contact">
