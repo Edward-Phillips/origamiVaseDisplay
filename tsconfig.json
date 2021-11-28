@@ -12,7 +12,8 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "baseUrl": "."
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/LayoutComponents/layout.js", "components/LayoutComponents/sidebar.js", "pages/about.js", "pages/contact.js", "pages/index.js", "pages/copilot/ProjectEuler/eulerProject.js", "pages/origami/vaseDisplay.js"],
   "exclude": ["node_modules"]
