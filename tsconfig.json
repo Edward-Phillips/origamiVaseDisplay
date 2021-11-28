@@ -14,6 +14,6 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/LayoutComponents/layout.js", "components/LayoutComponents/sidebar.js", "pages/about.js", "pages/contact.js", "pages/index.js", "pages/copilot/eulerProject.js", "pages/origami/vaseDisplay.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/LayoutComponents/layout.js", "components/LayoutComponents/sidebar.js", "pages/about.js", "pages/contact.js", "pages/index.js", "pages/copilot/ProjectEuler/eulerProject.js", "pages/origami/vaseDisplay.js"],
   "exclude": ["node_modules"]
 }
