@@ -49,7 +49,6 @@ export default function GoreStrip({pointsArray, goreWidth, maxcx, gorePosition})
   const getSectionLineColor = (gorePoint, prevPoint, nextPoint) => {
     const grad1 = gradient(gorePoint, prevPoint);
     const grad2 = gradient(nextPoint, prevPoint);
-    console.log(grad1, grad2);
     if (gradient(gorePoint, prevPoint) < gradient(nextPoint, prevPoint)) {
       return true;
     } else {
@@ -73,7 +72,6 @@ export default function GoreStrip({pointsArray, goreWidth, maxcx, gorePosition})
   const makeSectionLines = (points, xMin, xMax) => {
     const sectionLines = [];
     for (let i = 0; i < points.length - 1; i++) {
-      console.log(`section ${i}`);
       sectionLines.push(makeSectionLine(points[i - 1 >= 0 ? i - 1 : i], points[i], points[i + 1 <= points.length ? i + 1 : i ], lengthAlongLine(points.slice(0, i + 1)), xMin, xMax));
     }
     return sectionLines.map((line) => {
