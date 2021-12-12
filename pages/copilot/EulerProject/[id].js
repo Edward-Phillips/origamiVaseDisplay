@@ -4,7 +4,7 @@ import Sidebar from '../../../components/LayoutComponents/sidebar';
 
 
 export async function getStaticPaths() {
-  // currently I only have 7 solved problems, so I'm going to map over an array of length 12 and return the paths for each problem
+  // currently I only have 7 solved problems, so I'm going to map over an array of length 7 and return the paths for each problem
   const paths = [];
   for (let i = 1; i <= 7; i++) {
     paths.push({ params: { id: i.toString() } });
