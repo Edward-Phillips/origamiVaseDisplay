@@ -6,7 +6,7 @@ const prisma = new PrismaClient();
 
 async function main() {
   for (let EulerProblem of EulerProblems) {
-    await prisma.eulerProblem.create({
+    await prisma.eulerproblem.create({
       data: EulerProblem
     });
   }
@@ -18,3 +18,4 @@ main().catch(e => {
   }).finally(() => {
   prisma.$disconnect();
 });
+
