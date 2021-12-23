@@ -6,7 +6,6 @@ import { PrismaClient } from '@prisma/client';
 export async function getStaticProps() {
   const prisma = new PrismaClient();
   try {
-
     const eulerProblems = await prisma.eulerproblem.findMany()
     prisma.$disconnect();
     return {
@@ -14,6 +13,9 @@ export async function getStaticProps() {
     }
   } catch (error) {
     console.error(error)
+    return {
+      props : { eulerProblems : [] }
+    }
   }
 }
 

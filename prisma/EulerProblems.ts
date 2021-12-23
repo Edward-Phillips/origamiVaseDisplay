@@ -134,3 +134,5 @@ module.exports = [
     number: 7,
   }
 ];
+
+export {}
