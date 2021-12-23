@@ -1,0 +1,17 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "generated/client"
+}
+
+datasource db {
+  provider          = "mysql"
+  url               = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
+}
+
+model eulerproblem {
+  id       Int    @id @default(autoincrement())
+  function String @db.VarChar(9999)
+  comment  String
+  number   Int
+}
