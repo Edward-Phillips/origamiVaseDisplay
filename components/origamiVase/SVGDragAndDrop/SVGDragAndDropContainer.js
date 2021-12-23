@@ -84,7 +84,7 @@ export default function SVGContainer() {
             <button onClick={removeLastPointFromPointsObject}>Remove Last Point</button>
             <div className={styles.goreInputs}>
               <label htmlFor="gore-number-input">Pleat Number:</label>
-              <input id="gore-number-input" type="number" onChange={(e) => setGoreNumber(e.target.value)} value={goreNumber}></input>
+              <input id="gore-number-input" type="number" onChange={(e) => setGoreNumber(parseInt(e.target.value))} value={goreNumber}></input>
               <label htmlFor="gore-width-input">Pleat Width:</label>
               <input id="gore-width-input" type="number" readOnly value={goreWidth}></input>
               <label htmlFor="gore-height--input">Pleat length:</label>
