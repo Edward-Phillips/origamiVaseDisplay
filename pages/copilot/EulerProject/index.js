@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Layout from '../../../components/LayoutComponents/layout'
 import Sidebar from '../../../components/LayoutComponents/sidebar'
-import { PrismaClient } from 'src/generated/client'
+import { PrismaClient } from 'generated/client'
 
 export async function getStaticProps() {
   const prisma = new PrismaClient();
