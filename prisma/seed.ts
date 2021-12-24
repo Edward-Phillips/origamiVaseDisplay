@@ -18,3 +18,4 @@ main().catch(e => {
   }).finally(() => {
   prisma.$disconnect();
 });
+export {}
