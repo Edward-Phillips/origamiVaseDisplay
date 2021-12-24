@@ -3,12 +3,11 @@ import { NextApiRequest, NextApiResponse } from 'next'
 
 export default async function handle(req:NextApiRequest, res:NextApiResponse) {
   try {
-
     const prisma = new PrismaClient()
     const eulerProblems = await prisma.eulerProblem.findMany()
     prisma.$disconnect();
     res.json(eulerProblems)
   } catch (error:any) {
-    res.status(500).json({ error: error.message })
+    res.status(200).json({ error: error.message })
   }
 }
