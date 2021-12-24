@@ -1,10 +1,12 @@
 import Head from 'next/head';
 import Layout from '../../../components/LayoutComponents/layout'
 import Sidebar from '../../../components/LayoutComponents/sidebar'
+import { PrismaClient } from '@prisma/client'
 
 export async function getServerSideProps() {
-  const res = await fetch(`https://localhost:3000/api/eulerProblems`);
-  const eulerProblems = await res.json();
+  const prisma = new PrismaClient();
+  const eulerProblems = await prisma.eulerProblem.findMany()
+  prisma.$disconnect();
   return {
     props: {
       eulerProblems
