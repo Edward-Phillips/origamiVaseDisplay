@@ -5,7 +5,7 @@ import { PrismaClient } from '@prisma/client'
 
 export async function getServerSideProps() {
   const prisma = new PrismaClient();
-  const eulerProblems = await prisma.eulerProblem.findMany()
+  const eulerProblems = await prisma.eulerproblem.findMany()
   prisma.$disconnect();
   return {
     props: {
