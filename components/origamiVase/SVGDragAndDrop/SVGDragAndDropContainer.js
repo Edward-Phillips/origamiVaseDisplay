@@ -84,13 +84,13 @@ export default function SVGContainer() {
             <button onClick={removeLastPointFromPointsObject}>Remove Last Point</button>
             <div className={styles.goreInputs}>
               <label htmlFor="gore-number-input">Pleat Number:</label>
-              <input id="gore-number-input" type="number" onChange={(e) => setGoreNumber(e.target.value)} value={goreNumber}></input>
+              <input id="gore-number-input" type="number" onChange={(e) => setGoreNumber(parseInt(e.target.value))} value={goreNumber}></input>
               <label htmlFor="gore-width-input">Pleat Width:</label>
               <input id="gore-width-input" type="number" readOnly value={goreWidth}></input>
               <label htmlFor="gore-height--input">Pleat length:</label>
-              <input id="gore-height-input" type="number" onChange={(e) => setGoreLength(e.target.value)} value={goreLength}></input>
+              <input id="gore-height-input" type="number" onChange={(e) => setGoreLength(parseInt(e.target.value))} value={goreLength}></input>
               <label htmlFor="total-width-input">Total Width:</label>
-              <input id="total-width-input" type="number" onChange={(e) => setTotalWidth(e.target.value)} value={totalWidth} min={maxcx * maxcx * Math.PI/ 100}></input>
+              <input id="total-width-input" type="number" onChange={(e) => setTotalWidth(parseInt(e.target.value))} value={totalWidth} min={maxcx * maxcx * Math.PI/ 100}></input>
               <label htmlFor="gore-width-input">Display Crease Pattern:</label>
               <button id="gore-width-input" onTouch={(e) => setDisplayCreasePattern(!displayCreasePattern)} onClick={(e) => setDisplayCreasePattern(!displayCreasePattern)}>{displayCreasePattern ? 'Hide' : 'Display'} Crease Pattern</button>
               {displayCreasePattern && <><label htmlFor="gore-width-input">Toggle updating Crease Pattern in real time?</label>
