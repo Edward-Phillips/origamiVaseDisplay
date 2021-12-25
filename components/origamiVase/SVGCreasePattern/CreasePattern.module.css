@@ -2,17 +2,16 @@
   transform: rotate(180deg);
   display: flex;
   min-width: 95%;
-  /* max-height: 50vh; */
   margin: auto;
   padding-bottom: 45px;
   padding-top: 45px;
+  max-height: 755px;
 }
 
 @media screen and (max-width: 768px) {
   .svgWrapper {
     width: 100vw;
     transform: rotate(90deg);
-    max-height: 100vh;
   }
 }
 
