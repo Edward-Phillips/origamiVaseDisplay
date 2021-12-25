@@ -1,22 +1,21 @@
-import Link from 'next/link'
-import styles from './sidebar.module.scss'
+import Link from "next/link";
+import styles from "./sidebar.module.scss";
 
 export default function Sidebar() {
-
   return (
     <nav className={styles.nav}>
       <Link href="/">
-        <a>Home</a>
+        <div role="button">Home</div>
       </Link>
       <Link href="/origami/vaseDisplay">
-        <a>Origami Vase design</a>
+        <div role="button">Origami Vase design</div>
       </Link>
       <Link href="/copilot/EulerProject">
-        <a>Project Euler</a>
+        <div role="button">Project Euler</div>
       </Link>
       <Link href="/contact">
-        <a>Contact</a>
+        <div role="button">Contact</div>
       </Link>
     </nav>
-  )
+  );
 }
