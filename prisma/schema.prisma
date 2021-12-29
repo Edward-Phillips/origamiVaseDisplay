@@ -17,4 +17,5 @@ model eulerproblem {
   statement  String? @db.Text
   thoughts   String? @db.Text
   link       String?
+  title      String?
 }
