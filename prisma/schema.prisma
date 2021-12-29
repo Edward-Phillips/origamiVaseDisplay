@@ -14,7 +14,7 @@ model eulerproblem {
   comment    String
   number     Int
   difficulty Int?
-  statement  String? @db.VarChar(9999)
-  thoughts   String? @db.VarChar(9999)
+  statement  String? @db.Text
+  thoughts   String? @db.Text
   link       String?
 }
