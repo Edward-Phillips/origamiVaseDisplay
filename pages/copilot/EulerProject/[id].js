@@ -1,45 +1,59 @@
-import Head from 'next/head';
-import Layout from '../../../components/LayoutComponents/layout';
-import Sidebar from '../../../components/LayoutComponents/sidebar';
-
+import Head from "next/head";
+import Layout from "../../../components/LayoutComponents/layout";
+import Sidebar from "../../../components/LayoutComponents/sidebar";
+import Markdown from 'markdown-to-jsx';
+import { PrismaClient } from '@prisma/client'
 
 export async function getStaticPaths() {
-  // currently I only have 7 solved problems, so I'm going to map over an array of length 7 and return the paths for each problem
+  const prisma = new PrismaClient();
+  const eulerProblems = await prisma.eulerproblem.findMany();
+  prisma.$disconnect();
   const paths = [];
-  for (let i = 1; i <= 7; i++) {
+  for (let i = 1; i <= eulerProblems.length; i++) {
     paths.push({ params: { id: i.toString() } });
   }
-  return {paths: paths, fallback: false};
-};
+  return { paths: paths, fallback: false };
+}
 
 export async function getStaticProps({ params }) {
   const { id } = params;
-  const problem = await import(`../../../components/projectEuler/p${id}`);
+  const prisma = new PrismaClient();
+  const problem = await await prisma.eulerproblem.findUnique({
+    where: {
+      id: Number(id),
+    },
+  });
+  prisma.$disconnect();
   return {
     props: {
-      problem: JSON.stringify(problem[`p${id}`]),
+      problem: JSON.stringify(problem),
     },
   };
 }
 
-const ProblemPage = ({problem}) => {
+const ProblemPage = ({ problem }) => {
   problem = JSON.parse(problem);
+  const problemCode = '```javascript' + '\n' + problem.function + '\n' + '```';
   return (
     <>
-      <Head >
-        <title>Project Euler Problems</title>
+      <Head>
+        <title>{problem.title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-    <main>
-      <h1 style={{textAlign: "center"}}>Project Euler Problem solution by Github Copilot {problem.id}</h1>
-      <h2>Problem {problem.id}</h2>
-      <p>{problem.function}</p>
-      <p>{problem.comment}</p>
-    </main>
+      <main>
+        <h1 style={{ textAlign: "left" }}>
+          {problem.title}
+        </h1>
+        <p style={{ textAlign: "left" }}>{problem.statement}</p>
+        <Markdown style={{ textAlign: "left" }, {margin: "auto"}} options={{ forceBlock: true }}>
+          {problemCode}
+        </Markdown>
+        <p style={{ textAlign: "left" }}>{problem.comment}</p>
+        <p style={{ textAlign: "left" }}>{problem.thoughts}</p>
+      </main>
     </>
-  )
-}
-
+  );
+};
 
 ProblemPage.getLayout = function getLayout(page) {
   return (
@@ -47,7 +61,7 @@ ProblemPage.getLayout = function getLayout(page) {
       <Sidebar />
       {page}
     </Layout>
-  )
-}
+  );
+};
 
 export default ProblemPage;
