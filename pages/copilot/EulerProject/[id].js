@@ -1,8 +1,9 @@
 import Head from "next/head";
 import Layout from "../../../components/LayoutComponents/layout";
 import Sidebar from "../../../components/LayoutComponents/sidebar";
-import Markdown from 'markdown-to-jsx';
-import { PrismaClient } from '@prisma/client'
+import Markdown from "markdown-to-jsx";
+import { PrismaClient } from "@prisma/client";
+import styles from "./eulerProblem.module.scss";
 
 export async function getStaticPaths() {
   const prisma = new PrismaClient();
@@ -33,7 +34,7 @@ export async function getStaticProps({ params }) {
 
 const ProblemPage = ({ problem }) => {
   problem = JSON.parse(problem);
-  const problemCode = '```javascript' + '\n' + problem.function + '\n' + '```';
+  const problemCode = "```javascript" + "\n" + problem.function + "\n" + "```";
   return (
     <>
       <Head>
@@ -41,15 +42,32 @@ const ProblemPage = ({ problem }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1 style={{ textAlign: "left" }}>
-          {problem.title}
-        </h1>
-        <p style={{ textAlign: "left" }}>{problem.statement}</p>
-        <Markdown style={{ textAlign: "left" }, {margin: "auto"}} options={{ forceBlock: true }}>
-          {problemCode}
-        </Markdown>
-        <p style={{ textAlign: "left" }}>{problem.comment}</p>
-        <p style={{ textAlign: "left" }}>{problem.thoughts}</p>
+        <div className={styles.container}>
+          <div className={styles.titleAndSubNav}>
+            <div className={styles.back}>{"<"}</div>
+            <div className={styles.title}>
+              <h1>{problem.title}</h1>
+            </div>
+            <div className={styles.forwards}>{">"}</div>
+          </div>
+          <div className={styles.problemStatement}>
+            <p style={{ textAlign: "left" }}>{problem.statement}</p>
+          </div>
+          <div className={styles.codedSolution}>
+            <Markdown
+              style={({ textAlign: "left" }, { margin: "auto" })}
+              options={{ forceBlock: true }}
+            >
+              {problemCode}
+            </Markdown>
+          </div>
+          <div className={styles.generatingComment}>
+            <p style={{ textAlign: "left" }}>{problem.comment}</p>
+          </div>
+          <div className={styles.thoughts}>
+            <p style={{ textAlign: "left" }}>{problem.thoughts}</p>
+          </div>
+        </div>
       </main>
     </>
   );
