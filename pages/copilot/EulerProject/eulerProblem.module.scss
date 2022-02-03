@@ -40,11 +40,13 @@
 .back {
   grid-area: Back;
   place-self: center;
+  padding: 10px;
 }
 
 .forwards {
   grid-area: Forwards;
   place-self: center;
+  padding: 10px;
 }
 
 .problemStatement {

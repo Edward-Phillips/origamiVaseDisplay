@@ -36,30 +36,30 @@ export async function getStaticProps({ params }) {
 }
 
 const ProblemPage = ({ problem, totalProblems }) => {
-  problem = JSON.parse(problem);
-  totalProblems = JSON.parse(totalProblems)
-  const problemCode = "```javascript" + "\n" + problem.function + "\n" + "```";
+  const parsedProblem = JSON.parse(problem);
+  const parsedTotalProblems = JSON.parse(totalProblems)
+  const problemCode = "```javascript" + "\n" + parsedProblem.function + "\n" + "```";
   return (
     <>
       <Head>
-        <title>{problem.title}</title>
+        <title>{parsedProblem.title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section>
         <div className={styles.container}>
           <div className={styles.titleAndSubNav}>
-            <div className={styles.back}><Link href={`${problem.number > 1 ? `${problem.number-1}` : ""}`}>{"<"}</Link></div>
+            <div className={styles.back}><Link href={`${parsedProblem.number > 1 ? `${parsedProblem.number-1}` : "/copilot/EulerProject"}`}>{"<"}</Link></div>
             <div className={styles.title}>
-              <h1>{problem.title}</h1>
+              <h1>{parsedProblem.title}</h1>
             </div>
-            <div className={styles.forwards}><Link href={`${problem.number < totalProblems ? `${problem.number+1}` : ""}`}>{">"}</Link></div>
+            <div className={styles.forwards}><Link href={`${parsedProblem.number < totalProblems ? `${parsedProblem.number+1}` : "/copilot/EulerProject"}`}>{">"}</Link></div>
           </div>
           <div className={styles.problemStatement}>
-            <p style={{ textAlign: "left" }}>{problem.statement}</p>
+            <p style={{ textAlign: "left" }}>{parsedProblem.statement}</p>
           </div>
           <div className={styles.generatingComment}>
             <h3>Comment used to generate the code:</h3>
-            <p style={{ textAlign: "left" }}>{problem.comment}</p>
+            <p style={{ textAlign: "left" }}>{parsedProblem.comment}</p>
           </div>
             <Markdown
               className={styles.codedSolution}
@@ -70,7 +70,7 @@ const ProblemPage = ({ problem, totalProblems }) => {
             </Markdown>
           <div className={styles.thoughts}>
             <h3>Thoughts:</h3>
-            <p style={{ textAlign: "left" }}>{problem.thoughts}</p>
+            <p style={{ textAlign: "left" }}>{parsedProblem.thoughts}</p>
           </div>
         </div>
       </section>
