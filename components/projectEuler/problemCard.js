@@ -5,7 +5,7 @@ import styles from "./problemCard.module.scss"
 export default function ProblemCard({ problem }) {
   return (
     <div className={styles.cardContainer}>
-      <h3 classname={styles.cardTitle}>{problem.title}</h3>
+      <h3 className={styles.cardTitle}>{problem.title}</h3>
       <h4 className={styles.problemNumber}>Problem {problem.number}</h4>
       <Link href={`/copilot/EulerProject/${problem.number}`} passHref>
         <a>
