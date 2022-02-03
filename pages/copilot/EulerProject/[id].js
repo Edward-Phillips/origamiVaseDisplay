@@ -57,18 +57,19 @@ const ProblemPage = ({ problem, totalProblems }) => {
           <div className={styles.problemStatement}>
             <p style={{ textAlign: "left" }}>{problem.statement}</p>
           </div>
-          <div className={styles.codedSolution}>
+          <div className={styles.generatingComment}>
+            <h3>Comment used to generate the code:</h3>
+            <p style={{ textAlign: "left" }}>{problem.comment}</p>
+          </div>
             <Markdown
-              style={({ textAlign: "left" }, { margin: "auto" })}
+              className={styles.codedSolution}
+              style={({ textAlign: "left" }, {overflow: "wrap"}, { margin: "auto" })}
               options={{ forceBlock: true }}
             >
               {problemCode}
             </Markdown>
-          </div>
-          <div className={styles.generatingComment}>
-            <p style={{ textAlign: "left" }}>{problem.comment}</p>
-          </div>
           <div className={styles.thoughts}>
+            <h3>Thoughts:</h3>
             <p style={{ textAlign: "left" }}>{problem.thoughts}</p>
           </div>
         </div>
