@@ -41,7 +41,7 @@ const ProblemPage = ({ problem }) => {
         <title>{problem.title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <section>
         <div className={styles.container}>
           <div className={styles.titleAndSubNav}>
             <div className={styles.back}>{"<"}</div>
@@ -68,7 +68,7 @@ const ProblemPage = ({ problem }) => {
             <p style={{ textAlign: "left" }}>{problem.thoughts}</p>
           </div>
         </div>
-      </main>
+      </section>
     </>
   );
 };
