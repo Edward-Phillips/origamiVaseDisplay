@@ -1,6 +1,7 @@
 import Head from "next/head";
-import Layout from "../../../components/LayoutComponents/layout";
-import Sidebar from "../../../components/LayoutComponents/sidebar";
+import Link from "next/link";
+import Layout from "components/LayoutComponents/layout";
+import Sidebar from "components/LayoutComponents/sidebar";
 import Markdown from "markdown-to-jsx";
 import { PrismaClient } from "@prisma/client";
 import styles from "./eulerProblem.module.scss";
@@ -19,21 +20,24 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const { id } = params;
   const prisma = new PrismaClient();
-  const problem = await await prisma.eulerproblem.findUnique({
+  const problem = await prisma.eulerproblem.findUnique({
     where: {
       id: Number(id),
     },
   });
+  const totalProblems = await prisma.eulerproblem.findMany();
   prisma.$disconnect();
   return {
     props: {
       problem: JSON.stringify(problem),
+      totalProblems: JSON.stringify(totalProblems.length),
     },
   };
 }
 
-const ProblemPage = ({ problem }) => {
+const ProblemPage = ({ problem, totalProblems }) => {
   problem = JSON.parse(problem);
+  totalProblems = JSON.parse(totalProblems)
   const problemCode = "```javascript" + "\n" + problem.function + "\n" + "```";
   return (
     <>
@@ -44,11 +48,11 @@ const ProblemPage = ({ problem }) => {
       <section>
         <div className={styles.container}>
           <div className={styles.titleAndSubNav}>
-            <div className={styles.back}>{"<"}</div>
+            <div className={styles.back}><Link href={`${problem.number > 1 ? `${problem.number-1}` : ""}`}>{"<"}</Link></div>
             <div className={styles.title}>
               <h1>{problem.title}</h1>
             </div>
-            <div className={styles.forwards}>{">"}</div>
+            <div className={styles.forwards}><Link href={`${problem.number < totalProblems ? `${problem.number+1}` : ""}`}>{">"}</Link></div>
           </div>
           <div className={styles.problemStatement}>
             <p style={{ textAlign: "left" }}>{problem.statement}</p>
