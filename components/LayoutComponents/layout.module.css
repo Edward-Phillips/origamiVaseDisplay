@@ -3,6 +3,7 @@
   grid-template-rows: 100px 1fr;
   background-color: white;
   column-gap: 20px;
+  width: 100vw;
 }
 
 .main > section {

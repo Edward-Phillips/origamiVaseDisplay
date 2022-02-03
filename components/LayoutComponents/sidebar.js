@@ -13,9 +13,6 @@ export default function Sidebar() {
       <Link href="/copilot/EulerProject">
         <div role="button">Project Euler</div>
       </Link>
-      <Link href="/contact">
-        <div role="button">Contact</div>
-      </Link>
     </nav>
   );
 }

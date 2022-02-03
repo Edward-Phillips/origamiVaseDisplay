@@ -1,0 +1,13 @@
+.cardContainer {
+  display: grid;
+  max-width: 300px;
+  .cardTitle {
+    margin: 0px;
+  }
+  .problemNumber {
+    margin: 0px;
+  }
+  .problemStatement {
+    max-width: 300px;
+  }
+}
