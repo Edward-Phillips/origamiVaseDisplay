@@ -1,6 +1,7 @@
 import Head from "next/head";
-import Layout from "../../../components/LayoutComponents/layout";
-import Sidebar from "../../../components/LayoutComponents/sidebar";
+import Layout from "components/LayoutComponents/layout";
+import Sidebar from "components/LayoutComponents/sidebar";
+import ProblemCard from "components/projectEuler/problemCard";
 import { PrismaClient } from "@prisma/client";
 import styles from "./index.module.scss";
 
@@ -24,7 +25,7 @@ const EulerProject = (props) => {
         <title>Project Euler Problems</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.container}>
+      <section className={styles.container}>
         <h1 style={{ textAlign: "center" }}>Project Euler Problems</h1>
         <p className={styles.description}>
           <a href="https://projecteuler.net/">Project Euler</a> is a series of
@@ -35,18 +36,11 @@ const EulerProject = (props) => {
           will be posted here.
         </p>
         <section className={styles.problemGrid}>
-          {eulerProblems.map((_, i) => {
-            return (
-              <div key={`ProjectEulerProblemPages${i}`}>
-                <h2>Problem {i + 1}</h2>
-                <p>
-                  <a href={`/copilot/EulerProject/${i + 1}`}>Solution</a>
-                </p>
-              </div>
-            );
+          {eulerProblems.map((problem, i) => {
+            return <ProblemCard key={`problemcard-${i}`} problem={problem} />;
           })}
         </section>
-      </main>
+      </section>
     </>
   );
 };
