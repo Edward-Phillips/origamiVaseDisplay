@@ -6,7 +6,11 @@
   margin-left: 20px;
   margin-right: 20px;
   place-items: center;
-  width: 100vw;
+  width: 100%;
+
+  .title {
+    text-align: center;
+  }
 
   .description {
     grid-area: description;
@@ -14,13 +18,22 @@
     margin-bottom: 20px;
     max-width: 700px;
     place-self: center;
+    @media screen and (max-width: 480px) {
+      font-size: 26px;
+      margin-left:20px;
+      margin-right:20px;
+    }
   }
 
   .problemGrid {
     grid-area: problemGrid;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    row-gap: 20px;
-    column-gap: 20px;
+    grid-template-columns: repeat(3, 33.33%);
+    row-gap: 30px;
+    column-gap: 30px;
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+
   }
 }

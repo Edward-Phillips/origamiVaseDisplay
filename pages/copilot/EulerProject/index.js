@@ -26,7 +26,7 @@ const EulerProject = (props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section className={styles.container}>
-        <h1 style={{ textAlign: "center" }}>Project Euler Problems</h1>
+        <h1 className={styles.title}>Project Euler Problems</h1>
         <p className={styles.description}>
           <a href="https://projecteuler.net/">Project Euler</a> is a series of
           challenging mathematical/computer programming problems. This site is a
