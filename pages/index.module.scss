@@ -5,6 +5,12 @@
   margin: 0;
   width: 100%;
   height: 100%;
+  @media screen and (max-width: 480px) {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+  }
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,12 +19,16 @@
   .descriptionContainer {
     margin: auto;
     display: grid;
+    height: 100%;
 
     .articlePanel {
       place-self: center;
       width: 500px;
       font-weight: 400;
       font-size: 16px;
+      @media screen and (max-width: 480px) {
+        margin-top: 40px;
+      }
       > p {
         @media screen and (max-width: 480px) {
           font-size: 24px;
