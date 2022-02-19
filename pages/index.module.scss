@@ -1,4 +1,4 @@
-@import '../styles/variables.module.scss';
+@import "../styles/variables.module.scss";
 
 .indexContainer {
   padding: 0;
@@ -14,14 +14,21 @@
     margin: auto;
     display: grid;
 
-
     .articlePanel {
       place-self: center;
       width: 500px;
       font-weight: 400;
-      font-size: 0.875rem;
+      font-size: 16px;
+      > p {
+        @media screen and (max-width: 480px) {
+          font-size: 24px;
+        }
+      }
       > h3 {
         text-align: center;
+        @media screen and (max-width: 480px) {
+          font-size: 28px;
+        }
       }
       text-align: left;
       padding-left: 20px;
