@@ -3,7 +3,7 @@
 .SVGControls {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, 30px);
+  grid-template-rows: repeat(3, 30px) auto;
   row-gap: 10px;
 }
 
@@ -16,15 +16,24 @@
 
 .mainWrapper {
   display: grid; 
-  grid-auto-columns: 1fr; 
   grid-template-columns: 1fr 1fr; 
   grid-template-rows: 1fr 1fr; 
   gap: 0px 0px; 
   grid-template-areas: 
   "crossSectionDisplay controlPanel"
   "creasePatternDisplay creasePatternDisplay"; 
-  width: 100%; 
   height: 100%; 
+  padding-right: 20px;
+  padding-left: 20px;
+  @media screen and (max-width: 480px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    "crossSectionDisplay"
+    "controlPanel"
+    "creasePatternDisplay";
+    ;
+  }
 }
 
 .svgContainer {
@@ -33,7 +42,6 @@
 
 .dragAndDropSVG {
   border-style: solid;
-  border-width: 1px;
 }
 
 .description {
@@ -49,4 +57,7 @@
 .creasePatternDisplay {
   grid-area: creasePatternDisplay;
   max-height: 755px;
+  @media screen and (max-width: 480px) {
+    margin-top: 200px;
+  }
 }
