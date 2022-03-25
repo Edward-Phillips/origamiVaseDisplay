@@ -1,5 +1,4 @@
 import React from "react";
-import defaultValues from "../SVGDragAndDrop/defaultValues";
 import styles from "./CreasePattern.module.scss";
 import GoreStrip from "./GoreStrip";
 
