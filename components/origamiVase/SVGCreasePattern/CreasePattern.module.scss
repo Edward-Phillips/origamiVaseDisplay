@@ -6,18 +6,19 @@
   padding-bottom: 45px;
   padding-top: 45px;
   max-height: 755px;
-}
-
-@media screen and (max-width: 768px) {
-  .svgWrapper {
-    width: 100vw;
-    transform: rotate(90deg);
+  @media screen and (max-width: 480px) {
+      width: 100vw;
+      transform: rotate(90deg);
   }
 }
+
 
 .creasePatternSVG {
   flex: 1;
   padding-bottom: 20px;
+  @media screen and (max-width: 480px) {
+    margin-right: 20px;
+  }
 }
 
 .outline {
