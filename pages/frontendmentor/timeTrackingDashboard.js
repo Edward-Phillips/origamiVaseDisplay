@@ -29,9 +29,9 @@ const timeTrackingDashboard = () => {
               </div>
             </div>
             <div className={styles.usercardLower}>
-              <div className={styles.dailyButton}>Daily</div>
-              <div className={styles.weeklyButton}>Weekly</div>
-              <div className={styles.monthlyButton}>Monthly</div>
+              <div className={styles.dailyButton} onClick={()=>setSelected('daily')}>Daily</div>
+              <div className={styles.weeklyButton} onClick={()=>setSelected('weekly')}>Weekly</div>
+              <div className={styles.monthlyButton} onClick={()=>setSelected('monthly')}>Monthly</div>
             </div>
           </div>
           <>
