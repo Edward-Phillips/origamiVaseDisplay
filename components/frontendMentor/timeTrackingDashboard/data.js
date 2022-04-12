@@ -1,4 +1,4 @@
-export const timeTrackingData = [
+const timeTrackingData = [
   {
     "title": "Work",
     "image": "icon-work.svg",
@@ -108,3 +108,5 @@ export const timeTrackingData = [
     }
   }
 ]
+
+export default timeTrackingData;

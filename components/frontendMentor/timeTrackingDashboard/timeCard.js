@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-export default function timeTrackingDashboard({ data, selected }) {
+const TimeCard = ({ data, selected }) => {
+  useEffect(() => {
+    console.log({data});
+    }, []);
   return (
     <div>
       <div>{data.title}</div>
@@ -8,3 +11,5 @@ export default function timeTrackingDashboard({ data, selected }) {
     </div>
   );
 }
+
+export default TimeCard;
