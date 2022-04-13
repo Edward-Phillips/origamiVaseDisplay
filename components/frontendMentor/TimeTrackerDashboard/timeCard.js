@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
+import styles from './timeCard.module.scss';
 
 const TimeCard = ({ data, selected }) => {
-  useEffect(() => {
-    console.log({data});
-    }, []);
+  // useEffect(() => {
+  //   console.log({data});
+  //   }, []);
   const getTimeFrameName = () => {
     switch (selected) {
       case "weekly":
