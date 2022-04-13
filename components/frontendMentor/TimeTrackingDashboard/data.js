@@ -2,6 +2,7 @@ const timeTrackingData = [
   {
     "title": "Work",
     "image": "icon-work.svg",
+    "color": "rgba(255,139,100,255)",
     "timeframes": {
       "daily": {
         "current": 5,
@@ -20,6 +21,7 @@ const timeTrackingData = [
   {
     "title": "Play",
     "image": "icon-play.svg",
+    "color": "rgba(86,194,230,255)",
     "timeframes": {
       "daily": {
         "current": 1,
@@ -38,6 +40,7 @@ const timeTrackingData = [
   {
     "title": "Study",
     "image": "icon-study.svg",
+    "color": "rgba(255,94,125,255)",
     "timeframes": {
       "daily": {
         "current": 0,
@@ -56,6 +59,7 @@ const timeTrackingData = [
   {
     "title": "Exercise",
     "image": "icon-exercise.svg",
+    "color": "rgba(75,207,131,255)",
     "timeframes": {
       "daily": {
         "current": 1,
@@ -74,6 +78,7 @@ const timeTrackingData = [
   {
     "title": "Social",
     "image": "icon-social.svg",
+    "color": "rgba(114,53,209,255)",
     "timeframes": {
       "daily": {
         "current": 1,
@@ -92,6 +97,7 @@ const timeTrackingData = [
   {
     "title": "Self Care",
     "image": "icon-self-care.svg",
+    "color": "rgba(241,199,91,255)",
     "timeframes": {
       "daily": {
         "current": 0,
