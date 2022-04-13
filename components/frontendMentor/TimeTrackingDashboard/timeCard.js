@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
-// import styles from './timeCard.module.scss';
+import styles from "./timeCard.module.scss";
+import Image from "next/image";
 
 const TimeCard = ({ data, selected }) => {
   // useEffect(() => {
@@ -16,15 +17,21 @@ const TimeCard = ({ data, selected }) => {
       default:
         return "Last Week";
     }
-  }
+  };
   return (
     <div>
-      <div>{data.title}</div>
-      <div>{selected}</div>
-      <div>{data.timeframes[selected].current}hrs</div>
-      <div>{getTimeFrameName()} - {data.timeframes[selected].previous}hrs</div>
+      <div className={styles.timeCardUpperSection} style={{backgroundColor: `${data.color}`}}>
+        <Image height={50} width={50} src={`/images/${data.image}`} />
+      </div>
+      <div>
+        <div>{data.title}</div>
+        <div>{data.timeframes[selected].current}hrs</div>
+        <div>
+          {getTimeFrameName()} - {data.timeframes[selected].previous}hrs
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default TimeCard;
