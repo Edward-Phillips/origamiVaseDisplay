@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
-import TimeTrackingDashboard from 'components/frontendMentor/TimeTrackerDashboard/TimeTrackingDashboard.jsx';
+import TimeTrackingDashboard from 'components/frontendMentor/TimeTrackingDashboard/TimeTrackingDashboard.jsx';
 
 const timeTracker = () => {
 
