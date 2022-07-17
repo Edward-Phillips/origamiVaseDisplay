@@ -5,10 +5,16 @@ Projects on the site:
 ### Origami vase display:
 The idea is to manipulate the cross section of a vase and add details like how many gores (pleats) you want, how wide you want each gore to be, or how long you want it to be, with the end result being a crease pattern that you can print out to fold into the shape of the vase you've made the cross section of.
 
+### Pokemondle
+
+Who's that pokemon meets wordle, [hosted here](https://pokemondle.edphillips.co.uk)
+
 
 ### Github Copilot:
 
-I have been lucky enough to be involved in the github copilot technical preview for a few months now and in these pages I'll be documenting the projects/experiences I've had with the copilot, including trying to get it to solver problems from the Euler Project.
+I used Github Copilot to see how far we could get solving Euler Project problems.
+
+
 
 
 To view the site in action, [have a look here](https://edphillips.co.uk).
