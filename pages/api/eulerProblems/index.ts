@@ -1,13 +1,10 @@
-import { PrismaClient } from '@prisma/client'
 import { NextApiRequest, NextApiResponse } from 'next'
+import eulerProblemsData from '../../copilot/EulerProject/eulerProblemsData'
 
-export default async function handle(req:NextApiRequest, res:NextApiResponse) {
+export default async function handle(req: NextApiRequest, res: NextApiResponse) {
   try {
-    const prisma = new PrismaClient()
-    const eulerProblems = await prisma.eulerproblem.findMany()
-    prisma.$disconnect();
-    res.json(eulerProblems)
-  } catch (error:any) {
+    res.json(eulerProblemsData)
+  } catch (error: any) {
     res.status(200).json({ error: error.message })
   }
 }

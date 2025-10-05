@@ -2,16 +2,13 @@ import Head from "next/head";
 import Layout from "components/LayoutComponents/layout";
 import Sidebar from "components/LayoutComponents/sidebar";
 import ProblemCard from "components/projectEuler/problemCard";
-import { PrismaClient } from "@prisma/client";
 import styles from "./index.module.scss";
+import eulerProblemsData from "./eulerProblemsData";
 
 export async function getStaticProps() {
-  const prisma = new PrismaClient();
-  const eulerProblems = await prisma.eulerproblem.findMany();
-  prisma.$disconnect();
   return {
     props: {
-      eulerProblems,
+      eulerProblems: eulerProblemsData,
     },
   };
 }

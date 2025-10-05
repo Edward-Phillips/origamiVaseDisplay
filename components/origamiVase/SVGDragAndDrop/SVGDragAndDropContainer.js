@@ -148,6 +148,7 @@ export default function SVGContainer() {
               <label htmlFor="gore-width-input">Display Crease Pattern:</label>
               <button
                 id="gore-width-input"
+                // eslint-disable-next-line react/no-unknown-property
                 onTouch={(e) => setDisplayCreasePattern(!displayCreasePattern)}
                 onClick={(e) => setDisplayCreasePattern(!displayCreasePattern)}
               >
@@ -162,6 +163,7 @@ export default function SVGContainer() {
                     id="gore-width-input"
                     type="checkbox"
                     checked={realTimeDisplay}
+                    // eslint-disable-next-line react/no-unknown-property
                     onTouch={(e) => setRealTimeDisplay(!realTimeDisplay)}
                     onClick={(e) => setRealTimeDisplay(!realTimeDisplay)}
                   ></input>
@@ -174,6 +176,7 @@ export default function SVGContainer() {
                   </label>
                   <button
                     id="gore-width-input"
+                    // eslint-disable-next-line react/no-unknown-property
                     onTouch={() => updateCreasePatternPointsArray()}
                     onClick={() => updateCreasePatternPointsArray()}
                   >
