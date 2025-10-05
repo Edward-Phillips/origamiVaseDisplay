@@ -4,7 +4,7 @@ import Layout from "components/LayoutComponents/layout";
 import Sidebar from "components/LayoutComponents/sidebar";
 import Markdown from "markdown-to-jsx";
 import styles from "./eulerProblem.module.scss";
-import eulerProblemsData from "./eulerProblemsData";
+import eulerProblemsData from "../../../components/projectEuler/eulerProblemsData";
 
 export async function getStaticPaths() {
   const paths = [];

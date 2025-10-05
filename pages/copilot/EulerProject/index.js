@@ -3,7 +3,7 @@ import Layout from "components/LayoutComponents/layout";
 import Sidebar from "components/LayoutComponents/sidebar";
 import ProblemCard from "components/projectEuler/problemCard";
 import styles from "./index.module.scss";
-import eulerProblemsData from "./eulerProblemsData";
+import eulerProblemsData from "../../../components/projectEuler/eulerProblemsData";
 
 export async function getStaticProps() {
   return {

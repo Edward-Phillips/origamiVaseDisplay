@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import ReactToPrint from "react-to-print";
 import SVGCreasePatternContainer from "../SVGCreasePattern/SVGCreasePatternContainer";
 import SVGDragAndDrop from "./SVGDragAndDrop";
 import styles from "./SVGDragAndDropContainer.module.scss";
@@ -183,12 +182,6 @@ export default function SVGContainer() {
                     Update Crease Pattern
                   </button>{" "}
                 </>
-              )}
-              {displayCreasePattern && (
-                <ReactToPrint
-                  trigger={() => <button>Print out crease pattern</button>}
-                  content={() => componentRef.current}
-                />
               )}
             </div>
           </div>
